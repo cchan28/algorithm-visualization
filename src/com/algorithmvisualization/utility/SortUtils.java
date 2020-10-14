@@ -44,7 +44,7 @@ public class SortUtils {
 	
 	public void generateArray() {
 		this.isSorted = false;
-		for(int i = 0; i < this.array.length; i++) {
+		for(int i = 0; i < array.length; i++) {
 			this.array[i] = RANDOM.nextInt(VisualPanel.DIM_HEIGHT - 100) + 51;
 		}
 	}
