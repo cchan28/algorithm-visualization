@@ -1,12 +1,12 @@
 package com.algorithmvisualization.algorithm;
 
 import com.algorithmvisualization.panel.SortPanel;
-import com.algorithmvisualization.panel.VisualPanel;
+import com.algorithmvisualization.panel.BasePanel;
 import com.algorithmvisualization.utility.SortUtils;
 
 public class HeapSort {
 	
-	public static void heapSort(VisualPanel visualPanel, int[] array) {	
+	public static void heapSort(BasePanel visualPanel, int[] array) {	
 		for (int i = array.length / 2 - 1; i >= 0; i--) {
 			maxHeapify(visualPanel, array, array.length, i);
 		}
@@ -19,7 +19,7 @@ public class HeapSort {
 		
     }
 	
-	private static void maxHeapify(VisualPanel visualPanel, int[] array, int arraySize, int index) {
+	private static void maxHeapify(BasePanel visualPanel, int[] array, int arraySize, int index) {
 		int largest = index;
 		int left = 2 * index + 1;
 		int right = 2 * index + 2;

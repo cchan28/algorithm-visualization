@@ -3,18 +3,18 @@ package com.algorithmvisualization.algorithm;
 import java.util.Random;
 
 import com.algorithmvisualization.panel.SortPanel;
-import com.algorithmvisualization.panel.VisualPanel;
+import com.algorithmvisualization.panel.BasePanel;
 import com.algorithmvisualization.utility.SortUtils;
 
 public class QuickSort {
 
 	private static final Random RANDOM = new Random();
 	
-	public static void quickSort(VisualPanel visualPanel, int[] array) {
+	public static void quickSort(BasePanel visualPanel, int[] array) {
 		quickSortUtils(visualPanel, array, 0, array.length - 1);
 	}
 
-	private static void quickSortUtils(VisualPanel visualPanel, int[] array, int start, int end) {
+	private static void quickSortUtils(BasePanel visualPanel, int[] array, int start, int end) {
 		if (start < end) {
 			int pivot = partitionArray(visualPanel, array, start, end);
 			quickSortUtils(visualPanel, array, start, pivot - 1);
@@ -23,7 +23,7 @@ public class QuickSort {
 		
 	}
 
-	private static int partitionArray(VisualPanel visualPanel, int[] array, int start, int end) {
+	private static int partitionArray(BasePanel visualPanel, int[] array, int start, int end) {
 		randomizePivot(array, start, end);
 		int value = array[end];
 		int pivot = start;

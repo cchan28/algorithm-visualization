@@ -1,11 +1,11 @@
 package com.algorithmvisualization.algorithm;
 
 import com.algorithmvisualization.panel.SortPanel;
-import com.algorithmvisualization.panel.VisualPanel;
+import com.algorithmvisualization.panel.BasePanel;
 
 public class InsertionSort {
 
-	public static void insertionSort(VisualPanel visualPanel, int[] array) {
+	public static void insertionSort(BasePanel visualPanel, int[] array) {
 		for (int i = 1; i < array.length; i++) {
 			int index = i;
 			int value = array[i];

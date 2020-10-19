@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 
-public abstract class VisualPanel extends JPanel {
+public abstract class BasePanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -19,7 +19,7 @@ public abstract class VisualPanel extends JPanel {
 	private JButton startButton;
 	private JButton resetButton;
 	
-	public VisualPanel() {
+	public BasePanel() {
 		this.optionBar = new JComboBox<>();
 		this.startButton = new JButton("Start");
 		this.resetButton = new JButton("Reset");

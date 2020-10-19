@@ -1,15 +1,15 @@
 package com.algorithmvisualization.algorithm;
 
 import com.algorithmvisualization.panel.SortPanel;
-import com.algorithmvisualization.panel.VisualPanel;
+import com.algorithmvisualization.panel.BasePanel;
 
 public class MergeSort {
 
-	public static void mergeSort(VisualPanel visualPanel, int[] array) {
+	public static void mergeSort(BasePanel visualPanel, int[] array) {
 		mergeSortUtils(visualPanel, array, 0, array.length - 1);
 	}
 	
-	private static void mergeSortUtils(VisualPanel visualPanel, int[] array, int start, int end) {
+	private static void mergeSortUtils(BasePanel visualPanel, int[] array, int start, int end) {
 		if (start < end) {
 			int mid = start + (end - start) / 2;
 			mergeSortUtils(visualPanel, array, start, mid);
@@ -18,7 +18,7 @@ public class MergeSort {
 		}
 	}
 	
-	private static void merge(VisualPanel visualPanel, int[] array, int start, int mid, int end) {
+	private static void merge(BasePanel visualPanel, int[] array, int start, int mid, int end) {
 		int[] temp = new int[end-start+1];
 		int i = start;
 		int j = mid + 1;

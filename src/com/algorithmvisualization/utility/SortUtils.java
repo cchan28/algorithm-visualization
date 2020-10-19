@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.Random;
 
 import com.algorithmvisualization.algorithm.*;
-import com.algorithmvisualization.panel.VisualPanel;
+import com.algorithmvisualization.panel.BasePanel;
 
 public class SortUtils {
 
@@ -45,11 +45,11 @@ public class SortUtils {
 	public void generateArray() {
 		this.isSorted = false;
 		for(int i = 0; i < array.length; i++) {
-			this.array[i] = RANDOM.nextInt(VisualPanel.DIM_HEIGHT - 100) + 51;
+			this.array[i] = RANDOM.nextInt(BasePanel.DIM_HEIGHT - 100) + 51;
 		}
 	}
 	
-	public void sortArray(VisualPanel visualPanel, String sort) {
+	public void sortArray(BasePanel visualPanel, String sort) {
 		this.isSorting = true;
 		switch (sort) {
 			case "Bubble Sort":

@@ -13,10 +13,9 @@ import javax.swing.JLabel;
 
 import com.algorithmvisualization.utility.SortUtils;
 
-public class SortPanel extends VisualPanel {
+public class SortPanel extends BasePanel {
 
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = 1L;	
 	private static final List<String> sorts = Arrays.asList("Bubble Sort", "Insertion Sort", "Selection Sort", "Merge Sort", "Quick Sort", "Heap Sort");	
 	
 	private SortUtils sortUtils;
