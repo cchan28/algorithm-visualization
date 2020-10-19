@@ -6,20 +6,20 @@ import com.algorithmvisualization.utility.SortUtils;
 
 public class HeapSort {
 	
-	public static void heapSort(BasePanel visualPanel, int[] array) {	
+	public static void heapSort(BasePanel basePanel, int[] array) {	
 		for (int i = array.length / 2 - 1; i >= 0; i--) {
-			maxHeapify(visualPanel, array, array.length, i);
+			maxHeapify(basePanel, array, array.length, i);
 		}
 		
 		for (int i = array.length - 1; i > 0; i--) {
 			SortUtils.swap(array, i, 0);
-			((SortPanel) visualPanel).delayRepaint(i, 15);
-			maxHeapify(visualPanel, array, i, 0);
+			((SortPanel) basePanel).delayRepaint(i, 15);
+			maxHeapify(basePanel, array, i, 0);
 		}
 		
     }
 	
-	private static void maxHeapify(BasePanel visualPanel, int[] array, int arraySize, int index) {
+	private static void maxHeapify(BasePanel basePanel, int[] array, int arraySize, int index) {
 		int largest = index;
 		int left = 2 * index + 1;
 		int right = 2 * index + 2;
@@ -34,8 +34,8 @@ public class HeapSort {
 		
 		if (largest != index) {
 			SortUtils.swap(array, largest, index);
-			((SortPanel) visualPanel).delayRepaint(index, 15);
-			maxHeapify(visualPanel, array, arraySize, largest);
+			((SortPanel) basePanel).delayRepaint(index, 15);
+			maxHeapify(basePanel, array, arraySize, largest);
 		}	
 	}
 	

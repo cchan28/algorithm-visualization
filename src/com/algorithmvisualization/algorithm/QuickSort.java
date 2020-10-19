@@ -10,20 +10,20 @@ public class QuickSort {
 
 	private static final Random RANDOM = new Random();
 	
-	public static void quickSort(BasePanel visualPanel, int[] array) {
-		quickSortUtils(visualPanel, array, 0, array.length - 1);
+	public static void quickSort(BasePanel basePanel, int[] array) {
+		quickSortUtils(basePanel, array, 0, array.length - 1);
 	}
 
-	private static void quickSortUtils(BasePanel visualPanel, int[] array, int start, int end) {
+	private static void quickSortUtils(BasePanel basePanel, int[] array, int start, int end) {
 		if (start < end) {
-			int pivot = partitionArray(visualPanel, array, start, end);
-			quickSortUtils(visualPanel, array, start, pivot - 1);
-			quickSortUtils(visualPanel, array, pivot + 1, end);
+			int pivot = partitionArray(basePanel, array, start, end);
+			quickSortUtils(basePanel, array, start, pivot - 1);
+			quickSortUtils(basePanel, array, pivot + 1, end);
 		}
 		
 	}
 
-	private static int partitionArray(BasePanel visualPanel, int[] array, int start, int end) {
+	private static int partitionArray(BasePanel basePanel, int[] array, int start, int end) {
 		randomizePivot(array, start, end);
 		int value = array[end];
 		int pivot = start;
@@ -32,7 +32,7 @@ public class QuickSort {
 				SortUtils.swap(array, i, pivot);
 				pivot++;
 			}
-			((SortPanel) visualPanel).delayRepaint(pivot, 15);
+			((SortPanel) basePanel).delayRepaint(pivot, 15);
 		}
 		SortUtils.swap(array, end, pivot);
 		return pivot;

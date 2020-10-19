@@ -5,12 +5,12 @@ import com.algorithmvisualization.panel.BasePanel;
 
 public class InsertionSort {
 
-	public static void insertionSort(BasePanel visualPanel, int[] array) {
+	public static void insertionSort(BasePanel basePanel, int[] array) {
 		for (int i = 1; i < array.length; i++) {
 			int index = i;
 			int value = array[i];
 			while (index > 0 && array[index-1] > value) {
-				((SortPanel) visualPanel).delayRepaint(index, 7);
+				((SortPanel) basePanel).delayRepaint(index, 7);
 				array[index] = array[index-1];
 				index--;
 			}

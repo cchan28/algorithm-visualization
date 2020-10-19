@@ -5,20 +5,20 @@ import com.algorithmvisualization.panel.BasePanel;
 
 public class MergeSort {
 
-	public static void mergeSort(BasePanel visualPanel, int[] array) {
-		mergeSortUtils(visualPanel, array, 0, array.length - 1);
+	public static void mergeSort(BasePanel basePanel, int[] array) {
+		mergeSortUtils(basePanel, array, 0, array.length - 1);
 	}
 	
-	private static void mergeSortUtils(BasePanel visualPanel, int[] array, int start, int end) {
+	private static void mergeSortUtils(BasePanel basePanel, int[] array, int start, int end) {
 		if (start < end) {
 			int mid = start + (end - start) / 2;
-			mergeSortUtils(visualPanel, array, start, mid);
-			mergeSortUtils(visualPanel, array, mid + 1, end);
-			merge(visualPanel, array, start, mid, end);
+			mergeSortUtils(basePanel, array, start, mid);
+			mergeSortUtils(basePanel, array, mid + 1, end);
+			merge(basePanel, array, start, mid, end);
 		}
 	}
 	
-	private static void merge(BasePanel visualPanel, int[] array, int start, int mid, int end) {
+	private static void merge(BasePanel basePanel, int[] array, int start, int mid, int end) {
 		int[] temp = new int[end-start+1];
 		int i = start;
 		int j = mid + 1;
@@ -49,7 +49,7 @@ public class MergeSort {
 		
 		for (int l = start; l <= end; l++) {
 			array[l] = temp[l-start];
-			((SortPanel) visualPanel).delayRepaint(l, 15);
+			((SortPanel) basePanel).delayRepaint(l, 15);
 		}
 	}
 	

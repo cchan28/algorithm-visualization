@@ -6,14 +6,14 @@ import com.algorithmvisualization.utility.SortUtils;
 
 public class SelectionSort {
 
-	public static void selectionSort(BasePanel visualPanel, int[] array) {
+	public static void selectionSort(BasePanel basePanel, int[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			int min = i;
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[j] < array[min]) {
 					min = j;
 				}
-				((SortPanel) visualPanel).delayRepaint(min, 7);
+				((SortPanel) basePanel).delayRepaint(min, 7);
 			}
 			SortUtils.swap(array, i, min);
 		}

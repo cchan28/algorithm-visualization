@@ -49,26 +49,26 @@ public class SortUtils {
 		}
 	}
 	
-	public void sortArray(BasePanel visualPanel, String sort) {
+	public void sortArray(BasePanel basePanel, String sort) {
 		this.isSorting = true;
 		switch (sort) {
 			case "Bubble Sort":
-				BubbleSort.bubbleSort(visualPanel, array);
+				BubbleSort.bubbleSort(basePanel, array);
 				break;
 			case "Insertion Sort":
-				InsertionSort.insertionSort(visualPanel, array);
+				InsertionSort.insertionSort(basePanel, array);
 				break;
 			case "Selection Sort":
-				SelectionSort.selectionSort(visualPanel, array);
+				SelectionSort.selectionSort(basePanel, array);
 				break;
 			case "Merge Sort":
-				MergeSort.mergeSort(visualPanel, array);
+				MergeSort.mergeSort(basePanel, array);
 				break;
 			case "Quick Sort":
-				QuickSort.quickSort(visualPanel, array);
+				QuickSort.quickSort(basePanel, array);
 				break;
 			case "Heap Sort":
-				HeapSort.heapSort(visualPanel, array);
+				HeapSort.heapSort(basePanel, array);
 		}
 		this.isSorting = false;
 		this.isSorted = true;
